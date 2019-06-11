@@ -45,3 +45,29 @@ l="100.982"
 "100.982"
 parseFloat(l);
 100.982
+
+x=100;
+100
+y=200;
+200
+z=`shivam${x}`;
+
+
+"shivam100"
+console.log(`shivam
+mani
+tripathi`);
+VM168:1 shivam
+mani
+tripathi
+undefined
+z=`shivam ${x} and mani $(y)`;
+
+"shivam 100 and mani $(y)"
+z=`shivam ${x} and mani ${y}`;
+
+
+"shivam 100 and mani 200"
+console.log(z);
+VM265:1 shivam 100 and mani 200
+undefined
