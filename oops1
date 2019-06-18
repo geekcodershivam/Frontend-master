@@ -1,0 +1,62 @@
+var obj={id:1001,name:'shivam',salary:199900};
+undefined
+obj;
+{id: 1001, name: "shivam", salary: 199900}
+function createuser(id,name,salary){
+var obj={};
+obj.id=id;
+obj.name=name;
+obj.salary=salary;
+return obj;
+}
+
+undefined
+var shivam=createuser(1009,'shivam',300098);
+undefined
+shivam
+{id: 1009, name: "shivam", salary: 300098}
+function createemp(id,name,salary,position){
+this.id=id;
+this.name=name;
+this.salary=salary;
+this.position=position;
+}
+var ram=new createemp(109,'shivam',10000,'ceo');
+undefined
+ram;
+createemp {id: 109, name: "shivam", salary: 10000, position: "ceo"}
+createemp.prototype.print=function(){
+console.log(`hello ! i am  ${name} and at this position ${position}`); }
+
+
+
+ƒ (){
+console.log(`hello ! i am  ${name} and at this position ${position}`); }
+ram;
+createemp {id: 109, name: "shivam", salary: 10000, position: "ceo"}id: 109name: "shivam"position: "ceo"salary: 10000__proto__: Objectprint: ƒ ()arguments: nullcaller: nulllength: 0name: ""prototype: {constructor: ƒ}__proto__: ƒ ()[[FunctionLocation]]: VM2256:1[[Scopes]]: Scopes[1]constructor: ƒ createemp(id,name,salary,position)arguments: nullcaller: nulllength: 4name: "createemp"prototype: {print: ƒ, constructor: ƒ}__proto__: ƒ ()[[FunctionLocation]]: VM2212:1[[Scopes]]: Scopes[1]__proto__: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+var ravi=createemp(198,'shivvsmm',19999,'ceo');
+undefined
+ravi.print();
+VM2436:1 Uncaught TypeError: Cannot read property 'print' of undefined
+    at <anonymous>:1:6
+(anonymous) @ VM2436:1
+class Employee{
+constructor(id, name, salary){
+this.id = id;
+this.name = name;
+this.salary = salary;
+}
+print(){
+	console.log(`Id is ${this.id} Name is ${this.name} and Salary is ${this.salary}`);
+}
+toString(){
+	return `Id is ${this.id} Name is ${this.name} and Salary is ${this.salary}`;
+}
+}
+undefined
+var ram = new Employee(1001,"Ram",9999);
+undefined
+ram;
+Employee {id: 1001, name: "Ram", salary: 9999}
+typeof emp;
+"undefined"
