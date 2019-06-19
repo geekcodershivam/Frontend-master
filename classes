@@ -1,0 +1,51 @@
+class A{
+constructor(x,y){
+this.x=x;
+this.y=y;
+}
+show(){
+    console.log(`i am ${this.x} and ${this.y}.`);
+}
+}
+class B extends A{
+constructor(z){
+super(900,400);
+this.z=z;
+}
+print(){
+super.show();
+this.z=this.x+this.y;
+console.log(this.z);
+}}
+undefined
+B;
+class B extends A{
+constructor(z){
+super(900,400);
+this.z=z;
+}
+print(){
+super.show();
+this.z=this.x+this.y;
+console.log(this.z);
+}}
+A.prototype.disp()=function(){
+console.log("I am display");}
+VM1049:1 Uncaught TypeError: A.prototype.disp is not a function
+    at <anonymous>:1:13
+(anonymous) @ VM1049:1
+A.prototype.disp=function(){
+console.log("I am Display");
+}
+ƒ (){
+console.log("I am Display");
+}
+var obj=new B(10);
+undefined
+obj;
+
+B {x: 900, y: 400, z: 10}x: 900y: 400z: 10__proto__: Aconstructor: class Bprint: ƒ print()arguments: (...)caller: (...)length: 0name: "print"__proto__: ƒ ()[[FunctionLocation]]: VM766:15[[Scopes]]: Scopes[2]__proto__: Object
+obj.disp;
+ƒ (){
+console.log("I am Display");
+}
