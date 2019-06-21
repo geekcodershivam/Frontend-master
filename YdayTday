@@ -1,0 +1,129 @@
+add()
+function add(x=0,y=0){
+return x+y;
+}
+0
+add();
+0
+add(NaN,NaN);
+NaN
+add()
+function add(x=0,y=0){
+return isNaN(x+y)?0:x+y;
+}
+0
+add(NaN,NaN);
+0
+add(10,19)
+29
+add(undefined,undefined)
+0
+add("shivam",10)
+0
+add("10",19);
+"1019"
+add(shi,10)
+VM418:1 Uncaught ReferenceError: shi is not defined
+    at <anonymous>:1:5
+(anonymous) @ VM418:1
+add("shi
+VM437:1 Uncaught SyntaxError: Invalid or unexpected token
+add()
+function add(x=0,y=0){
+return x+y;
+}
+0
+add()
+function add(x=0,y=0){
+x=isNaN(x)?0:x;
+y=isNaN(x)?0:y;
+return x+y;
+}
+0
+add(10,19);
+29
+add(NaN,NaN);
+NaN
+function add(x=0,y=0){
+x=isNaN(x)?0:x;
+y=isNaN(y)?0:y;
+return x+y;
+}
+undefined
+add(NaN,NaN);
+0
+add("shivam",10)
+10
+add("10",10)
+"1010"
+isNaN(shivam)
+VM808:1 Uncaught ReferenceError: shivam is not defined
+    at <anonymous>:1:7
+(anonymous) @ VM808:1
+function adder(){
+var sum=0;
+for(let i=0; i<arguments.length; i++){
+    sum+=parseInt(arguments[i])}
+return sum;
+}
+undefined
+adder(10,10,10,10)
+40
+function adder(...args){
+var sum=0;
+for(let x of args){
+ sum+=parseInt(arguments[x)}
+return sum;
+}
+VM1271:4 Uncaught SyntaxError: Unexpected token )
+function adder(...args){
+var sum=0;
+for(let x of args){
+ sum+=parseInt(arguments[x])}
+return sum;
+}
+undefined
+function adder(...args){
+var sum = 0;
+for(let a of args){
+sum+=isNaN(parseInt(a))?0:parseInt(a);
+}
+return sum;
+}
+undefined
+adder(2,6,9,5,10)
+32
+function adder(...args){
+var sum=0;
+for(let x of args){
+ sum+=parseInt(x)}
+return sum;
+}
+undefined
+adder(2,6,9,5,10);
+32
+window.adder(1,4,6,6);
+17
+function show()
+{
+var x=function(){
+console.log("this is insider function");
+}
+
+VM1658:6 Uncaught SyntaxError: Unexpected end of input
+function show()
+{
+var x=function(){
+console.log("this is insider function");
+}
+console.log("this is outuer finction");
+}
+
+undefined
+show();
+VM1722:6 this is outuer finction
+undefined
+x;
+VM1753:1 Uncaught ReferenceError: x is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM1753:1

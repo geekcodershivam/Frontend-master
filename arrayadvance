@@ -1,0 +1,167 @@
+arr=[1,2,3,48,9,87,65,27,27,93,378,389];
+(12) [1, 2, 3, 48, 9, 87, 65, 27, 27, 93, 378, 389]
+function print(ele){
+console.log(ele);
+}
+arr.forEach(print);
+VM245:2 1
+VM245:2 2
+VM245:2 3
+VM245:2 48
+VM245:2 9
+VM245:2 87
+VM245:2 65
+VM245:2 27
+VM245:2 27
+VM245:2 93
+VM245:2 378
+VM245:2 389
+undefined
+arr.find(ele=>else>10);
+VM341:1 Uncaught SyntaxError: Unexpected token else
+arr.find(ele=>ele<=20);
+1
+arr.findIndex(ele=> ele>10);;
+3
+arr.filter(ele => ele==27);
+(2) [27, 27]
+arr1=arr.filter(ele => ele ==27);
+(2) [27, 27]
+arr1;
+(2) [27, 27]
+var m=arr.filter(ele => 1==1);
+undefined
+m;
+(12) [1, 2, 3, 48, 9, 87, 65, 27, 27, 93, 378, 389]
+arr
+(12) [1, 2, 3, 48, 9, 87, 65, 27, 27, 93, 378, 389]
+var n=arr.filter(ele => ele >10);
+undefined
+n;
+(8) [48, 87, 65, 27, 27, 93, 378, 389]
+var p=arr.map(ele => "Rs"+ele+".00");
+undefined
+p;
+(12) ["Rs1.00", "Rs2.00", "Rs3.00", "Rs48.00", "Rs9.00", "Rs87.00", "Rs65.00", "Rs27.00", "Rs27.00", "Rs93.00", "Rs378.00", "Rs389.00"]
+var gst=arr.map(ele =>"Rs "+(ele+(ele*0.18))+".00");
+undefined
+gst;
+(12) ["Rs 1.18.00", "Rs 2.36.00", "Rs 3.54.00", "Rs 56.64.00", "Rs 10.62.00", "Rs 102.66.00", "Rs 76.7.00", "Rs 31.86.00", "Rs 31.86.00", "Rs 109.74.00", "Rs 446.03999999999996.00", "Rs 459.02.00"]
+for(let a of arr){
+console.log(a);
+}
+VM1229:2 1
+VM1229:2 2
+VM1229:2 3
+VM1229:2 48
+VM1229:2 9
+VM1229:2 87
+VM1229:2 65
+VM1229:2 27
+VM1229:2 27
+VM1229:2 93
+VM1229:2 378
+VM1229:2 389
+undefined
+for(let i=0; i<arr.length;i++)
+{console.log(a);
+}
+VM1354:2 Uncaught ReferenceError: a is not defined
+    at <anonymous>:2:14
+(anonymous) @ VM1354:2
+for(let i=0; i<arr.length;i++)
+{console.log(arr[i]);
+}
+VM1379:2 1
+VM1379:2 2
+VM1379:2 3
+VM1379:2 48
+VM1379:2 9
+VM1379:2 87
+VM1379:2 65
+VM1379:2 27
+VM1379:2 27
+VM1379:2 93
+VM1379:2 378
+VM1379:2 389
+undefined
+arr;
+(12) [1, 2, 3, 48, 9, 87, 65, 27, 27, 93, 378, 389]
+var v=arr.map(y=>y);
+undefined
+v;
+(12) [1, 2, 3, 48, 9, 87, 65, 27, 27, 93, 378, 389]
+var a=function(x){
+console.log(x);
+}
+undefined
+function loop(fn)
+{for(let i=0;i<=10;i++)
+fn(i);}
+undefined
+loop(a);
+VM1527:2 0
+VM1527:2 1
+VM1527:2 2
+VM1527:2 3
+VM1527:2 4
+VM1527:2 5
+VM1527:2 6
+VM1527:2 7
+VM1527:2 8
+VM1527:2 9
+VM1527:2 10
+undefined
+arr.sort((a,b)=>b-a);
+(12) [389, 378, 93, 87, 65, 48, 27, 27, 9, 3, 2, 1]
+arr.sort((a,b)=>a-b);
+(12) [1, 2, 3, 9, 27, 27, 48, 65, 87, 93, 378, 389]
+var name=["shivam","mani","tripathi","mishar","tiwari","ankit","zee","netflix"];
+undefined
+name.sort((a,b)=> a.localeCampare(b));
+VM1945:1 Uncaught TypeError: name.sort is not a function
+    at <anonymous>:1:6
+(anonymous) @ VM1945:1
+name.sort((a,b)=>a.localeCompare(b));
+VM2013:1 Uncaught TypeError: name.sort is not a function
+    at <anonymous>:1:6
+(anonymous) @ VM2013:1
+var r=arr.reduce((acc,ele)=>acc+=ele,acc=0);
+undefined
+r;
+1129
+var k=arr.reduce((acc,ele) => { 
+if (ele ==9){
+acc.push(ele);
+}
+return acc,acc=[]);
+VM2341:5 Uncaught SyntaxError: Unexpected token )
+arr.reduce((acc,ele)=>{
+if(ele == 9){
+acc.push(ele);
+}
+return acc;
+},acc=[]);
+[9]
+arr;
+(12) [1, 2, 3, 9, 27, 27, 48, 65, 87, 93, 378, 389]
+var k= arr.reduce((acc,ele)=>{
+if(ele==27){
+arr.push(ele)
+}
+return acc;},
+acc=[]);
+undefined
+k;
+[]length: 0__proto__: Array(0)
+var k= arr.reduce((acc,ele)=>{
+if(ele==27){
+acc.push(ele)
+}
+return acc;},
+acc=[]);
+undefined
+arr;
+(14) [1, 2, 3, 9, 27, 27, 48, 65, 87, 93, 378, 389, 27, 27]
+k;
+(4) [27, 27, 27, 27]

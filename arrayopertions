@@ -1,0 +1,57 @@
+//array opertion
+undefined
+arr=[1,2,3,4,5,8,9];
+(7) [1, 2, 3, 4, 5, 8, 9]
+arr.length;
+7
+arr1=[10,12,11,13,14,15];
+(6) [10, 12, 11, 13, 14, 15]
+arr2=arr.concat(arr1);
+(13) [1, 2, 3, 4, 5, 8, 9, 10, 12, 11, 13, 14, 15]
+arr2.length;
+13
+arr.pop();
+9
+arr.shift();
+1
+arr.unshift();
+5
+arr;
+(5) [2, 3, 4, 5, 8]
+arr.slice(2)
+(3) [4, 5, 8]
+arr2;
+(13) [1, 2, 3, 4, 5, 8, 9, 10, 12, 11, 13, 14, 15]
+arrnew=arr2.slice(5);
+(8) [8, 9, 10, 12, 11, 13, 14, 15]
+arrnew;
+(8) [8, 9, 10, 12, 11, 13, 14, 15]
+arr.sort();
+(5) [2, 3, 4, 5, 8]
+arr.reverse();
+(5) [8, 5, 4, 3, 2]
+arr.sort();
+(5) [2, 3, 4, 5, 8]
+Math.max.apply(null,arr);
+8
+Math.min.apply(null,arr);
+2
+arr4=arr.map(x => x*2);
+(5) [4, 6, 8, 10, 16]
+arr=[];
+[]
+arr;
+[]
+arr.length;
+0
+arr2=arr2.map( x=> x*3); 
+(13) [3, 6, 9, 12, 15, 24, 27, 30, 36, 33, 39, 42, 45]
+arr2=arr2.filter( x=> x>19);
+(8) [24, 27, 30, 36, 33, 39, 42, 45]
+arr2=arr2.filter( x=> max.apply(x) );
+VM1177:1 Uncaught ReferenceError: max is not defined
+    at <anonymous>:1:27
+    at Array.filter (<anonymous>)
+    at <anonymous>:1:11
+(anonymous) @ VM1177:1
+(anonymous) @ VM1177:1
