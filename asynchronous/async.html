@@ -8,23 +8,77 @@
     <script>
 
 
-const thrid=()=>{
-setTimeout(()=>{
-    console.log("thrid settimeout");
-},3000);
+//const thrid=()=>{
+//setTimeout(()=>{//
+//    console.log("thrid settimeout");
+//},3000);
+//
+//}
+//
+//const second=()=>{
+//console.log("second")
+//thrid();
+//}
+//const first= ()=>{
+//console.log("start");
+//second();
+//console.log("end");
+//}
+//first();
+//
+
+const getID= new Promise((resolve,reject)=>{
+    setTimeout(() => {
+        resolve([1,2,3,4,5,6]);
+    }, 1500);
+});
+
+const getRecipe= recID=>{
+    return new Promise((resolve,reject)=>{
+        setTimeout((IDs)=>{
+const recipe={
+    title:'fresh tomato pasta',publisher:'shivam'};
+    resolve(`${IDs}: ${recipe.title}`);
+        },1500,recID);
+    });
+}
+const getRelated= publisher=>{
+    return new Promise((resolve,reject)=>{
+        setTimeout((name)=>{
+const recipe={
+    title:'Pizza',publisher:'shivam'};
+    resolve(`${name}: ${recipe.title}`);
+        },1500,publisher);
+    });
+}
+
+//getID
+//.then(Id=>{
+//console.log(Id);
+    //return getRecipe(Id[2]);
+    
+//})
+//.then(recipe=>{
+    //console.log(recipe);
+    //return getRelated('shivam');
+//})
+//.then(recipe=>{
+//    console.log(recipe);
+//})
+//.catch(err=>{
+//    console.log(err);
+//});
+
+async function getRecipeAW(){
+    const Id=await getID;
+    console.log(Id);
+    const recipe = await getRecipe(Id[2]);
+    console.log(recipe);
+    const relate= await getRelated('shivam');
+    console.log(relate);
 
 }
-
-const second=()=>{
-console.log("second")
-thrid();
-}
-const first= ()=>{
-console.log("start");
-second();
-console.log("end");
-}
-first();
+getRecipeAW();
 
 
 
