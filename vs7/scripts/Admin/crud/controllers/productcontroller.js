@@ -42,21 +42,50 @@ function init(){
   }
    }
 
-function registerEvents(){
+function clone(fireBaseObject){
+    var productObject = new Product(fireBaseObject.id,fireBaseObject.name,fireBaseObject.desc,fireBaseObject.price, fireBaseObject.url, fireBaseObject.color);
+    productOperations.add(productObject);
+    
+}
 
+
+function loadServer(){
+    var products = firebase.database().ref('/products');
+    products.on('value',(snapshot)=>{
+       let prods =  snapshot.val();
+       for(let key in prods){
+          let fireBaseProductObject =  prods[key];
+          clone(fireBaseProductObject);
+          
+       }
+       printProducts(productOperations.products);
+       showRecordCounts();
+    })
+
+}
+
+function saveServer(){
+    var productarray=productOperations.products;
+  for(let product of productarray){
+    firebase.database().ref('/products/'+product.id).set(product);
+  }
+}
+   
+
+function registerEvents(){
+    
 document.getElementById('add').addEventListener('click',addProduct);
 document.getElementById('delete').addEventListener('click',deleteProduct);
 document.getElementById('update').addEventListener('click',updateProduct);
 document.getElementById('clear').addEventListener('click',ClearAll);
 document.getElementById('sortby').addEventListener('change', doneSort);
 document.getElementById('searchby').addEventListener('change', doneSearch);
-document.getElementById('search').addEventListener('click',Hide);
+document.getElementById('search').addEventListener('click',Hides);
 document.getElementById('sort').addEventListener('click',Hide);
 document.getElementById('save').addEventListener('click',saveProduct);
 document.getElementById('load').addEventListener('click',loadProduct);
-
-
-
+document.getElementById('savedb').addEventListener('click',saveServer);
+document.getElementById('loaddb').addEventListener('click',loadServer);
 }
 
 function ClearAll(){
@@ -136,9 +165,16 @@ function deleteProduct(){
     function Hide() {
         var div = document.querySelector("#Divsort");
         div.classList.toggle('hide');
+        
+    }
+
+
+    function Hides() {
         var divs = document.querySelector("#Divsearch");
         divs.classList.toggle('hide');
     }
+
+
 
     function doneSort() {
         var sortBy = this.value;
