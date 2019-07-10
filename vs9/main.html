@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.css">
+    <link rel="stylesheet" href="assets/css/style.default.css">
+    <link rel="stylesheet" href="assets/css/custom.css">    
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/design.css">
+    <link rel="stylesheet" href="assets/css/nav.css">
+<script src="scripts/signout.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+    <script  src="scripts/utils/firebase.js"></script>
+    <script  src="scripts/utils/utlies.js"></script>
+    <script src="scripts/Admin/crud/Models/product.js"></script>
+    <script src="scripts/Admin/crud/Models/productoperation.js"></script>
+    <script src="scripts/Admin/crud/controllers/productcontroller.js"></script>
+    
+</head>
+<body>
+    <Header>
+            <div class="row">
+                    <div class="col-md-3 top-info text-left mt-lg-4">
+                        
+                    </div>
+                    <div class="col-md-6 logo-w3layouts text-center">
+                        <h1 class="logo-w3layouts">
+                            <a class="navbar-brand" href="main.html">
+                                SHOPNOW </a>
+                        </h1>
+                    </div>
+                            </div>
+                       
+        
+
+    </Header>
+        <div class="top-bar hidden-xs-down">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-4 col-md-3">
+                      <ul class="list-inline d-flex flex-row">
+                        <li class="list-inline-item"> 
+                          <div class="dropdown">
+                            <button id="currency" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">USD</button>
+                            <div aria-labelledby="currency" class="dropdown-menu"><a href="#" class="dropdown-item">EUR</a><a href="#" class="dropdown-item">EGP</a><a href="#" class="dropdown-item">AUD</a></div>
+                          </div>
+                        </li>
+                        <li class="list-inline-item">
+                          <div class="dropdown">
+                            <button id="lang" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">English</button>
+                            <div aria-labelledby="lang" class="dropdown-menu"><a href="#" class="dropdown-item">French</a><a href="#" class="dropdown-item">Spanish</a><a href="#" class="dropdown-item">Arabic</a></div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-sm-8 col-md-9 text-right account-details">
+                      <ul class="list-inline">
+                        <li class="list-inline-item"> <a href="#"></a></li>
+                        <li class="list-inline-item"><a href="#"></a></li>
+                        <li class="list-inline-item"><button class="btn" onclick="SignOut()">SignOut</button></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Navbar -->
+              <nav class="navbar navbar-toggleable-sm">
+                <div class="container">
+                  <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right">   
+                  </button> <div class="shopping-card">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                       <span id="cartcount" class="count">0</span>
+                   </div>
+                  </div>
+                
+              </nav>
+
+            <div class="up-item">
+                    
+                </div>
+        <div id="output"> </div>
+</body>
+</html>
