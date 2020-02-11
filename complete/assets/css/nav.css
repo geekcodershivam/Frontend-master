@@ -1,0 +1,166 @@
+html,
+body {
+    margin: 0;
+    font-size: 100%;
+    background: #fff;
+    font-family: 'Inconsolata', monospace;
+}
+
+body a {
+    text-decoration: none;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    font-family: 'Inconsolata', monospace;
+    text-align: center;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="text"],
+input[type="email"],
+input[type="search"] {
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    font-family: 'Inconsolata', monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: 'Inconsolata', monospace;
+    letter-spacing: 1px;
+}
+
+p {
+    margin: 0;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+    line-height: 1.9em;
+    color: #959596;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+label {
+    margin: 0;
+}
+
+
+
+header {
+    padding: 2em 2em 0 2em;
+}
+
+.top-bar_sub .btn-primary {
+    color: #000;
+    background-color: #00bce400;
+    border: 2px solid #00bce4;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.top-bar_sub .btn-primary:hover {
+    color: #fff;
+    background-color: #00bce4;
+    border: 2px solid #00bce4;
+}
+
+.btn-primary:focus,
+.btn-primary.focus,
+.btn:focus,
+.btn.focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: none;
+}
+
+span.sub {
+    font-size: 10px;
+    vertical-align: top;
+    background: #fff;
+    color: #555;
+    padding: 4px 12px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.14);
+}
+
+h1.logo-w3layouts a.navbar-brand {
+    font-size: 1.5em;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.26);
+    color: #454546;
+    margin: 0;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+
+.top-header {
+    background: none !important;
+}
+
+.navbar-light .navbar-nav .nav-link,
+.dropdown-item {
+    color: #828284;
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin: 0em 0.5em;
+    padding: 10px 25px;
+    text-transform: uppercase;
+}
+
+.dropdown-item {
+    margin: 0 !important;
+    color: #777;
+}
+
+.dropdown-menu {
+    background-color: rgb(255, 255, 255);
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    color: #000;
+    text-decoration: none;
+    background-color: #ffffff;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    color: #16181b;
+    text-decoration: none;
+    background-color: #eef0f3;
+}
+
+.navbar-light .navbar-nav .show>.nav-link,
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #ff4e00;
+    border-radius: 0px;
+}
+
+.dropdown-menu {
+    padding: 0;
+}
+.btn{
+    background-color: #000;
+    color: #fff;
+}
